@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import React ,{useState} from "react";
+import TweeList from "./components/TweetList";
+import CreateTweet from "./components/CreateTweet";
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
-}
+// const name = "Beka"; // const message = "My React App";
 
+const [name, setName] = useState("Dev Ed");
+const message = "Hello";
+
+return(
+
+  <div>
+    <CreateTweet/>
+    {/* <Tweet name={name} message={message}/> */}
+    <TweeList name={name} message={message}/>
+  
+
+  </div>
+);
+ 
+
+}
 export default App;
